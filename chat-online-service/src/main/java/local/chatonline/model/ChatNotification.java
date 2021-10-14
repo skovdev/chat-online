@@ -3,14 +3,14 @@ package local.chatonline.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 
 import lombok.experimental.FieldDefaults;
 
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class ChatNotification {
     String id;
     String senderId;
