@@ -1,4 +1,4 @@
-package local.chatonline.service;
+package local.chatonline;
 
 import org.springframework.boot.SpringApplication;
 
