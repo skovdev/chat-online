@@ -12,6 +12,7 @@
 
     <modules>
         <module>chat-online-service</module>
+        <module>auth-service</module>
     </modules>
 
     <properties>
