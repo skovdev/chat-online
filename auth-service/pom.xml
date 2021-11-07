@@ -18,6 +18,8 @@
         <spring.boot.web.version>2.5.5</spring.boot.web.version>
         <spring.boot.security.version>2.5.5</spring.boot.security.version>
         <spring.boot.data.mongodb.version>2.5.5</spring.boot.data.mongodb.version>
+        <jackson.core.version>2.13.0</jackson.core.version>
+        <jackson.databind.version>2.13.0</jackson.databind.version>
         <jsonwebtoken.version>0.9.1</jsonwebtoken.version>
         <lombok.version>1.18.22</lombok.version>
         <maven.compiler.source>14</maven.compiler.source>
@@ -49,6 +51,16 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>${jsonwebtoken.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.databind.version}</version>
         </dependency>
 
         <dependency>
