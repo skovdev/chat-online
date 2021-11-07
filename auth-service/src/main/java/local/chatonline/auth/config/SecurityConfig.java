@@ -3,9 +3,10 @@ package local.chatonline.auth.config;
 import local.chatonline.auth.service.UserService;
 
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 
 import lombok.experimental.FieldDefaults;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpMethod;
 
@@ -43,14 +44,37 @@ import javax.servlet.http.HttpServletResponse;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @EnableWebSecurity
-@AllArgsConstructor
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     UserService userService;
+
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
+
     UserDetailsService userDetailsService;
+
+    @Autowired
+    public void setUserDetailsService(UserDetailsService userDetailsService) {
+        this.userDetailsService = userDetailsService;
+    }
+
     JwtConfig jwtConfig;
+
+    @Autowired
+    public void setJwtConfig(JwtConfig jwtConfig) {
+        this.jwtConfig = jwtConfig;
+    }
+
     JwtTokenProvider jwtTokenProvider;
+
+    @Autowired
+    public void setJwtTokenProvider(JwtTokenProvider jwtTokenProvider) {
+        this.jwtTokenProvider = jwtTokenProvider;
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
