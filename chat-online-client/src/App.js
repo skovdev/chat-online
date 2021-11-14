@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Signin from "./signin/Signin";
-import Signup from "./signin/Signup";
+import Signup from "./signup/Signup";
 import Profile from "./profile/Profile";
 import Chat from "./chat/Chat";
 
@@ -27,3 +27,5 @@ const App = (props) => {
         </div>
     );
 }
+
+export default App
