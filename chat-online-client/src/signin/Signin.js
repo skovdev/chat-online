@@ -29,54 +29,54 @@ const Signin = (props) => {
     }, [test])
 
     const initFacebookLogin = () => {
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: "118319422120166",
-                autoLogAppEvents: true,
-                xfbml: true,
-                version: "v7.0",
-            });
-        }
+        // window.fbAsyncInit = function () {
+        //     FB.init({
+        //         appId: "118319422120166",
+        //         autoLogAppEvents: true,
+        //         xfbml: true,
+        //         version: "v7.0",
+        //     });
+        // }
     }
 
     const getFacebookAccessToken = () => {
         
-        setFacebookLoading(true);
+        // setFacebookLoading(true);
 
-        FB.login(
+        // FB.login(
             
-            function (response) {
+        //     function (response) {
 
-                if (response.status === "connected") {
-                    const facebookLoginRequest = {
-                        accessToken: response.authResponse.accessToken,
-                    };
-                    facebookLogin(facebookLoginRequest)
-                    .then((response) => {
-                        localStorage.setItem("accessToken", response.accessToken);
-                        props.history.push("/");
-                        setFacebookLoading(false);
-                    }).catch((error) => {
+        //         if (response.status === "connected") {
+        //             const facebookLoginRequest = {
+        //                 accessToken: response.authResponse.accessToken,
+        //             };
+        //             facebookLogin(facebookLoginRequest)
+        //             .then((response) => {
+        //                 localStorage.setItem("accessToken", response.accessToken);
+        //                 props.history.push("/");
+        //                 setFacebookLoading(false);
+        //             }).catch((error) => {
 
-                        if (error.status === 401) {
-                            notification.error({
-                                message: "ERROR",
-                                description: "Invalid credentials",
-                            });
-                        } else {
-                            notification.error({
-                                message: "ERROR",
-                                description: error.message || "Sorry! Something went wrong. Please try again!",
-                            });
-                        }
-                        setFacebookLoading(false);
-                    });
-                } else {
-                    console.log(response);
-                }
-            },
-            { scope: "email" }
-        );
+        //                 if (error.status === 401) {
+        //                     notification.error({
+        //                         message: "ERROR",
+        //                         description: "Invalid credentials",
+        //                     });
+        //                 } else {
+        //                     notification.error({
+        //                         message: "ERROR",
+        //                         description: error.message || "Sorry! Something went wrong. Please try again!",
+        //                     });
+        //                 }
+        //                 setFacebookLoading(false);
+        //             });
+        //         } else {
+        //             console.log(response);
+        //         }
+        //     },
+        //     { scope: "email" }
+        // );
     };
 
     const onFinish = (values) => {
@@ -129,3 +129,5 @@ const Signin = (props) => {
       </div>
     );
 };
+
+export default Signin
