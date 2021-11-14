@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Form, Input, Button, nofification } from "antd";
+import { Form, Input, Button, notification} from "antd";
 
 import { DingtalkOutlined } from "@ant-design/icons";
 
@@ -22,7 +22,7 @@ const Signup = (props) => {
         setLoading(true);
         signup(values)
         .then((response) => {
-            nofification.success({
+            notification.success({
                 message: "Success",
                 descrition: "Thank you! You're successfully registered. Please Login to continue!",
             });
@@ -63,3 +63,5 @@ const Signup = (props) => {
         </div>
     )
 }
+
+export default Signup

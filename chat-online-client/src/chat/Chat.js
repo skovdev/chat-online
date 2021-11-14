@@ -79,7 +79,7 @@ const Chat = (props) => {
         } else {
             message.info("Received a new message from " + notification.senderName);
         }
-        loadContracts();
+        loadContacts();
     };
 
     const sendMessage = (msg) => {
