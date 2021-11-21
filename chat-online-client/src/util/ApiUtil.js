@@ -37,15 +37,6 @@ export function login(loginRequest) {
     });
 }
 
-export function facebookLogin(facebookLoginRequest) {
-
-    return request({
-        url: AUTH_SERVICE + "/facebook/signin",
-        method: "POST",
-        body: JSON.stringify(facebookLoginRequest),
-    });
-}
-
 export function signup(signupReqeust) {
     return request({
         url: AUTH_SERVICE + "/users",
