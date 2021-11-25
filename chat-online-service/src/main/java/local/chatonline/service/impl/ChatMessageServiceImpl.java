@@ -12,7 +12,7 @@ import local.chatonline.service.ChatMessageService;
 import local.chatonline.service.ChatRoomService;
 
 import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 
 import lombok.experimental.FieldDefaults;
 
@@ -29,7 +29,7 @@ import java.util.List;
 
 @Service
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class ChatMessageServiceImpl implements ChatMessageService {
 
     ChatMessageRepository chatMessageRepository;
