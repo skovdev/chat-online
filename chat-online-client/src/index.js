@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { RecoilRoot } from "recoil";
-import recoilPersist from "recoil-persist";
 
 import App from "./App";
 
@@ -10,14 +9,8 @@ import * as serviceWorker from "./serviceWorker";
 
 import "./index.css";
 
-const  { RecoilPersist, updateState } = recoilPersist([], {
-    key: "recoil-persist",
-    storage: sessionStorage,
-});
-
 ReactDOM.render(
-    <RecoilRoot initializeState={updateState}>
-      <RecoilPersist />
+    <RecoilRoot>
       <App />
     </RecoilRoot>,
     document.getElementById("root")
